@@ -1,0 +1,5 @@
+<%= link_to("Back to Contacts", "/contacts") %> | <%= link_to("Edit", "/contacts/#{@contact.id}/edit") %>
+<%= link_to("Back to Contacts", "/contacts") %> | <%= link_to("Edit", "/contacts/#{@contact.id}/edit") %> | <%= link_to("Delete", "/contacts/#{@contact.id}", method: :delete, data: {confirm: "Are you sure you want to delete this contact?"})  %>
+
+<p><%= @contact.first_name %>, <%= @contact.last_name %></p>
+<img src="<%= @contact.url %>">

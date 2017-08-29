@@ -1,0 +1,20 @@
+<h1>Add a contact</h1>
+<%= link_to("Back to contacts", "/contacts") %>
+
+<%= form_for(@contact) do |f| %>
+  <p>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>

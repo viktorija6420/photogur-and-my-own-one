@@ -1,0 +1,12 @@
+<h1>Contacts(<%= @contacts.length %>)</h1>
+
+<%= link_to("New Contact", "/contacts/new") %>
+
+
+
+
+
+<% @contacts.each do |current_contact| %>
+<p><%= current_contact.first_name %>, <%= current_contact.last_name %></p>
+<a href="/contacts/<%=current_contact.id%>"><img src="<%= current_contact.url %>" alt="<%= current_contact.first_name %>"></a>
+<%end%>

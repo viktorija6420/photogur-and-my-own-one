@@ -1,0 +1,27 @@
+<h1>Edit Contact</h1>
+
+<p>
+  <%= link_to("Back", "/contacts/#{@contact.id}")%>
+</p>
+
+<%= form_for(@contact, url:"/contacts/#{@contact.id}") do |f| %>
+<p>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name %>
+</p>
+
+<p>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name %>
+</p>
+
+<p>
+  <%= f.label :url %><br>
+  <%= f.text_field :url %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
